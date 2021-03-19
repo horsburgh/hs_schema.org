@@ -1,0 +1,173 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "datacite": "http://purl.org/spar/datacite/"
+    },
+    
+    "@id": "https://doi.org/10.4211/hs.4de42db6485f47b290bd9e17b017bb51",
+    "sameAs": "https://www.hydroshare.org/resource/4de42db6485f47b290bd9e17b017bb51",
+    "url": "https://doi.org/10.4211/hs.4de42db6485f47b290bd9e17b017bb51",
+    
+    "@type": "Dataset",
+    "additionalType": "http://www.hydroshare.org/terms/CompositeResource",
+    "name": "Supporting data for &quot;A low-cost, open source monitoring system for collecting high-resolution water use data on magnetically-driven residential water meters&quot;",
+    "description": "The files provided here are the supporting data and code files for the analyses presented in \u0022A low\u002Dcost, open source monitoring system for collecting high\u002Dresolution water use data on magnetically\u002Ddriven residential water meters,\u0022 an article in Sensors (https://doi.org/10.3390/s20133655). The data included in this resource were collected in laboratory testing and field deployment of the Cyberinfrastructure for Intelligent Water Supply (CIWS) datalogger, an open source, low cost device capable of collecting high temporal resolution data on magnetically driven water meters. The code included allows replication of the analyses presented in the article, and the raw data included allow for extension of the analyses conducted. In the article we present a low\u002Dcost (≈ $150) monitoring system for collecting high resolution residential water use data without disrupting the operation of commonly available water meters. This system was designed for installation on top of analog, magnetically\u002Ddriven, positive displacement, residential water meters and can collect data at variable time resolution intervals. The system couples an Arduino Pro microcontroller board, a datalogging shield customized for this specific application, and a magnetometer sensor. The system was developed and calibrated at the Utah Water Research Laboratory and was deployed for testing on five single family residences in Logan and Providence, Utah for a period of over 1 month. Battery life for the device was estimated to be over 5 weeks with continuous data collection at a 4 second time interval. Data collected using this system, under ideal installation conditions, was within 2% of the volume recorded by the register of the meter on which they were installed. Results from field deployments are presented to demonstrate the accuracy, functionality, and applicability of the system. Results indicate the device is capable of collecting data at a resolution sufficient for identifying individual water use events and analyzing water use at coarser temporal resolutions. This system is of special interest for water end\u002Duse studies, future projections of residential water use, water infrastructure design, and for advancing our understanding of water use timing and behavior. The system’s hardware design and software are open source, are available for potential reuse, and can be customized for specific research needs.",
+    "keywords": ["smart meter", "water end uses", "residential water use", "Arduino", "high resolution data"],
+    
+    "creativeWorkStatus": "Published",
+    
+    "inLanguage": "en-US",
+    "identifier": {
+        "@type": [
+            "PropertyValue",
+            "datacite:ResourceIdentifier"
+        ],
+        
+        "datacite:usesIdentifierScheme": {
+            "@id": "datacite:doi"
+        },
+        "propertyId": "DOI",
+        "url": "https://doi.org/10.4211/hs.4de42db6485f47b290bd9e17b017bb51",
+        "value": "10.4211/hs.4de42db6485f47b290bd9e17b017bb51"
+        
+    },
+    "creator": [
+    {
+        "@type": "Person",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "UT, US"
+        },
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Utah State University"
+        },
+        "email": "camilo.bastidas@usu.edu",
+        "name": "Camilo J. Bastidas Pacheco",
+        "url": [
+            "https://www.hydroshare.org/user/3619/",
+            "http://www.linkedin.com/in/camilobastidas"
+        ]
+    },
+    {
+        "@type": "Person",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Utah, US"
+        },
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Utah State University"
+        },
+        "email": "jeff.horsburgh@usu.edu",
+        "name": "Jeffery S. Horsburgh",
+        "url": [
+            "https://www.hydroshare.org/user/10/",
+            "http://jeffh.usu.edu",
+            "https://orcid.org/0000-0002-0768-3196",
+            "https://www.researchgate.net/profile/Jeffery_Horsburgh",
+            "https://scholar.google.com/citations?user=mu4k534AAAAJ&hl=en"
+        ]
+    }
+    ],
+    
+    "temporalCoverage": "2019-05-17/2019-10-15",
+    
+    
+    "spatialCoverage": {
+        "@type": "Place",
+        
+        "name": "Logan",
+        
+        "geo": {
+            
+            "@type": "GeoShape",
+            "box": "41.6876, -111.8889 41.7608, -111.7626"
+            
+        }
+    },
+    
+    
+    "publisher": {
+        "@id": "https://www.hydroshare.org"
+    },
+    
+    "provider": {
+        "@id": "https://www.hydroshare.org",
+        "@type": "Organization",
+        "name": "HydroShare",
+        "url": "https://www.hydroshare.org"
+    },
+    "includedInDataCatalog": {
+		"@type": "DataCatalog",
+		"name": "HydroShare",
+    	"url": "https://www.hydroshare.org/search/"
+	},
+	 
+	"license": {
+	    "@type": "CreativeWork",
+	    
+        "text": "This resource is shared under the Creative Commons Attribution CC BY.",
+        "url": "http://creativecommons.org/licenses/by/4.0/"
+        
+	},
+	
+     "isAccessibleForFree": true, 
+    
+    "citation": [
+    
+        "Bastidas Pacheco, C.J., Horsburgh, J.S., Tracy, R.J. (2020). A low-cost, open source monitoring system for collecting high-resolution water use data on magnetically-driven residential water meters, Sensors, 20(13), 3655, https://doi.org/10.3390/s20133655."
+    
+    ],
+    
+    
+    "funder": [
+    
+        {
+            "@type": "Organization",
+            "name": "National Science Foundation",
+            "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1552444"
+        }
+        
+    ],
+    
+    "dateCreated": "2020-05-15T21:27:46.007652+00:00",
+    "dateModified": "2020-07-09T17:21:41.228449+00:00",
+    "datePublished": "2020-07-09T17:21:39.202237+00:00", 
+    "subjectOf": {
+        "@type": "CreativeWork",
+        "name": "Dublin Core Metadata Document Describing the Dataset",
+        "url": "https://www.hydroshare.org/hsapi/resource/4de42db6485f47b290bd9e17b017bb51/scimeta/",
+        "encodingFormat": "application/rdf+xml"
+    },
+    "distribution": {
+        "@type": "DataDownload",
+        "contentSize": "103.8 MB",
+        "encodingFormat": "application/zip",
+        "contentUrl": "https://www.hydroshare.org/hsapi/resource/4de42db6485f47b290bd9e17b017bb51/",
+        "description": "Zipped BagIt Bag containing the HydroShare Resource",
+        "dateModified": "2020-07-09T17:21:41.228449+00:00",
+        
+        "identifier": [
+        {
+        
+            "@type": ["PropertyValue", "datacite:ResourceIdentifier"],
+            "datacite:usesIdentifierScheme": {
+                "@id": "datacite:local-resource-identifier-scheme"
+            },
+            "propertyId": "UUID",
+            "value": "uuid:4de42db6485f47b290bd9e17b017bb51"
+        },
+        {
+            "@type": "PropertyValue",
+            "additionalType": [
+                "http://www.wikidata.org/entity/Q185235",
+                "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions/md5"
+            ],
+            "identifier": "md5:1b722b3fbda711a8f2f864efd7c812e7",
+            "propertyID": "MD5",
+            "value": "1b722b3fbda711a8f2f864efd7c812e7"
+        }
+        ]
+    }
+}
