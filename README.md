@@ -15,4 +15,4 @@ To accomplish these objectives, HydroShare's implementation is based on Version 
 ## This repository contains:
 
 * [Description of HydroShare's Implementation](https://github.com/horsburgh/hs_schema.org/blob/master/guides/HydroShare_Technical_Implementation.md)
-* [Example Dataset Encoding](https://github.com/horsburgh/hs_schema.org/blob/master/examples/Example1_HydroShare_Encoding.json)
+* [Examples of Dataset Encoding](https://github.com/horsburgh/hs_schema.org/tree/main/examples)
