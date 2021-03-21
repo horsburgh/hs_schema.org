@@ -1,152 +1,132 @@
 {
-   "@context":{
-      "@vocab":"http://www.schema.org/",
-      "datacite":"http://purl.org/spar/datacite/"
-   },
-   "@id":"https://doi.org/10.4211/hs.481cfb738f2b44e28305813a04aede71",
-   "sameAs":"https://www.hydroshare.org/resource/481cfb738f2b44e28305813a04aede71",
-   "url":"https://doi.org/10.4211/hs.481cfb738f2b44e28305813a04aede71",
-   "@type":"Dataset",
-   "additionalType":"http://playground.hydroshare.org/terms/CompositeResource",
-   "name":"Mobile Sensing Platform Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
-   "description":"This dataset includes data collected using a mobile sensing platform during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Data were collected by floating a payload of sensors in a longitudinal transect down the length of the canal and recording latitude, longitude, and several water quality variables, including fluorescent dissolved organic matter (FDOM), observations from custom fluorometers designed for calculating the fluorescence index (FI), dissolved oxygen, temperature, pH, specific conductance, and turbidity. The methods used in collection and processing of these data are described in detail in the methods document included within this resource.",
-   "keywords":[
-      "Mobile Sensing Platform",
-      "dissolved organic matter",
-      "water quality",
-      "stormwater",
-      "urban"
+   "@context": "https://schema.org/",
+   "@type": "Dataset",
+   "@id": "https://doi.org/10.4211/hs.6711ca843bcc4834b51288a3ddc3aa08#resource",
+   "url": "https://doi.org/10.4211/hs.6711ca843bcc4834b51288a3ddc3aa08",
+   "sameAs": "https://www.hydroshare.org/resource/6711ca843bcc4834b51288a3ddc3aa08",
+   "additionalType": "http://www.hydroshare.org/terms/CompositeResource",
+   "name": "Mobile Sensing Platform Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
+   "description": "This dataset includes data collected using a mobile sensing platform during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Data were collected by floating a payload of sensors in a longitudinal transect down the length of the canal and recording latitude, longitude, and several water quality variables, including fluorescent dissolved organic matter (FDOM), observations from custom fluorometers designed for calculating the fluorescence index (FI), dissolved oxygen, temperature, pH, specific conductance, and turbidity. The methods used in collection and processing of these data are described in detail in the methods document included within this resource.",
+   "keywords": ["Mobile Sensing Platform", "dissolved organic matter", "water quality", "Stormwater", "Urban"],
+   "creativeWorkStatus": "Published",
+   "inLanguage": "en-US",
+   "identifier": [
+      {
+         "@id": "https://doi.org/10.4211/hs.6711ca843bcc4834b51288a3ddc3aa08",
+         "@type": "PropertyValue",
+         "propertyID": "https://registry.identifiers.org/registry/doi",
+         "value": "doi:10.4211/hs.6711ca843bcc4834b51288a3ddc3aa08",
+         "url": "https://doi.org/10.4211/hs.6711ca843bcc4834b51288a3ddc3aa08"
+      },
+      "http://www.hydroshare.org/resource/6711ca843bcc4834b51288a3ddc3aa08"
    ],
-   "creativeWorkStatus":"Published",
-   "inLanguage":"en-US",
-   "identifier":{
-      "@type":[
-         "PropertyValue",
-         "datacite:ResourceIdentifier"
-      ],
-      "datacite:usesIdentifierScheme":{
-         "@id":"datacite:doi"
-      },
-      "propertyId":"DOI",
-      "url":"https://doi.org/10.4211/hs.481cfb738f2b44e28305813a04aede71",
-      "value":"10.4211/hs.481cfb738f2b44e28305813a04aede71"
+   "creator": {
+      "@list": [
+         {
+            "@type": "Person",
+            "name": "Bryce Mihalevich",
+            "address": {
+               "@type": "PostalAddress",
+               "streetAddress": "8200 Old Main Hill, Logan, UT 84322-8200"
+            },
+            "affiliation":{
+               "@type": "Organization",
+               "name": "Utah State University"
+            },
+            "email": "bryce.mihalevich@aggiemail.usu.edu",
+            "url": "https://www.hydroshare.org/user/130/"
+         },
+         {
+            "@type": "Person",
+            "name": "Jeffery S. Horsburgh",
+            "address": {
+               "@type": "PostalAddress",
+               "streetAddress": "8200 Old Main Hill, Logan, Utah 84322-8200"
+            },
+            "affiliation": {
+               "@type": "Organization",
+               "name": "Utah State University"
+            },
+            "email": "jeff.horsburgh@usu.edu",
+            "url": [
+               "https://www.hydroshare.org/user/10/",
+               "http://jeffh.usu.edu"
+            ]
+         }
+      ]
    },
-   "creator":[
-      {
-         "@type":"Person",
-         "affiliation":{
-            "@type":"Organization",
-            "name":"Utah State University"
-         },
-         "email":"jeff.horsburgh@usu.edu",
-         "name":"Jeff Horsburgh",
-         "url":"https://www.hydroshare.org/user/6/"
-      },
-      {
-         "@type":"Person",
-         "address":{
-            "@type":"PostalAddress",
-            "streetAddress":"8200 Old Main Hill, Logan, UT 84322-8200"
-         },
-         "affiliation":{
-            "@type":"Organization",
-            "name":"Utah Water Research Laboratory"
-         },
-         "email":"bryce.mihalevich@usu.edu",
-         "name":"Bryce Mihalevich"
-      },
-      {
-         "@type":"Organization",
-         "address":{
-            "@type":"PostalAddress",
-            "streetAddress":"8200 Old Main Hill, Logan, UT 84322-8200"
-         },
-         "email":"uwrl.receptionist@usu.edu",
-         "name":"Utah Water Research Laboratory",
-         "url":"http://uwrl.usu.edu"
-      }
-   ],
-   "temporalCoverage":"2015-04-01/2016-11-01",
-   "spatialCoverage":{
-      "@type":"Place",
-      "geo":{
-         "@type":"GeoShape",
-         "box":"41.7481, -111.8548 41.7650, -111.8447"
+   "temporalCoverage": "2015-04-01/2016-11-01",
+   "spatialCoverage": {
+      "@type": "Place",
+      "geo": {
+         "@type": "GeoShape",
+         "box": "41.7312, -111.8513 41.7662, -111.8346"
       }
    },
-   "publisher":{
-      "@id":"https://www.hydroshare.org"
+   "provider": {
+      "@id": "https://www.hydroshare.org",
+      "@type": "Organization",
+      "name": "HydroShare",
+      "url": "https://www.hydroshare.org"
    },
-   "provider":{
-      "@id":"https://www.hydroshare.org",
-      "@type":"Organization",
-      "name":"HydroShare",
-      "url":"https://www.hydroshare.org"
+   "publisher": {
+      "@id": "https://www.hydroshare.org"
    },
-   "includedInDataCatalog":{
-      "@type":"DataCatalog",
-      "name":"HydroShare",
-      "url":"https://www.hydroshare.org/search/"
+   "license": {
+      "@type": "CreativeWork",
+      "text": "This resource is shared under the Creative Commons Attribution CC BY.",
+      "url": "http://creativecommons.org/licenses/by/4.0/"
    },
-   "license":{
-      "@type":"CreativeWork",
-      "text":"This resource is shared under the Creative Commons Attribution CC BY.",
-      "url":"http://creativecommons.org/licenses/by/4.0/"
+   "isAccessibleForFree": true,
+   "includedInDataCatalog": {
+      "@type": "DataCatalog",
+      "name": "HydroShare",
+      "url": "https://www.hydroshare.org/search/"
    },
-   "isAccessibleForFree":true,
-   "citation":[
+   "citation": [
       "Mihalevich, B. A., Horsburgh, J. S., Melcher, A. A. (2017). High-frequency measurements reveal spatial and temporal patterns of dissolved organic matter in an urban water conveyance, Environmental Monitoring and Assessment, http://dx.doi.org/10.1007/s10661-017-6310-y",
       "Mihalevich, B. A. (2017). Resolving Spatial and Temporal Variability in Dissolved Organic Matter Characteristics within Combined Agricultural and Stormwater Conveyances, Digital Commons at USU, All Graduate Theses and Dissertations, 6264. https://digitalcommons.usu.edu/etd/6264"
    ],
-   "funder":[
+   "funder": [
       {
-         "@type":"Organization",
-         "name":"Utah Water Research Laboratory",
-         "url":"http://uwrl.usu.edu"
+         "@type": "Organization",
+         "name": "Utah Water Research Laboratory",
+         "url": "http://uwrl.usu.edu"
       },
       {
-         "@type":"Organization",
-         "name":"National Science Foundation",
-         "url":"https://www.nsf.gov/awardsearch/showAward?AWD_ID=1208732"
+         "@type": "Organization",
+         "name": "National Science Foundation",
+         "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1208732"
       }
    ],
-   "dateCreated":"2019-12-09T20:57:46.287526+00:00",
-   "dateModified":"2019-12-09T21:21:50.284113+00:00",
-   "datePublished":"2019-12-09T21:11:05.062814+00:00",
-   "subjectOf":{
-      "@type":"CreativeWork",
-      "name":"Dublin Core Metadata Document Describing the Dataset",
-      "url":"https://www.hydroshare.org/hsapi/resource/481cfb738f2b44e28305813a04aede71/scimeta/",
+   "dateCreated": "2017-10-18T22:10:13.752485+00:00",
+   "dateModified": "2017-10-27T21:12:51.747530+00:00",
+   "datePublished": "2017-10-27T21:12:47.823684+00:00",
+   "subjectOf": {
+      "@type": "DataDownload",
+      "name": "resourcemetadata.xml",
+      "description": "Dublin Core Metadata Document Describing the Dataset",
+      "url":"https://www.hydroshare.org/hsapi/resource/6711ca843bcc4834b51288a3ddc3aa08/scimeta/",
       "encodingFormat":"application/rdf+xml"
    },
-   "distribution":{
-      "@type":"DataDownload",
-      "contentSize":"8.2 MB",
-      "encodingFormat":"application/zip",
-      "contentUrl":"https://www.hydroshare.org/hsapi/resource/481cfb738f2b44e28305813a04aede71/",
-      "description":"Zipped BagIt Bag containing the HydroShare Resource",
-      "dateModified":"2019-12-09T21:21:50.284113+00:00",
-      "identifier":[
+   "distribution": {
+      "@type": "DataDownload",
+      "contentSize": "8.2 MB",
+      "encodingFormat": "application/zip",
+      "contentUrl": "https://www.hydroshare.org/hsapi/resource/6711ca843bcc4834b51288a3ddc3aa08/",
+      "description": "Zipped BagIt Bag containing the HydroShare Resource",
+      "dateModified": "2017-10-27T21:12:51.747530+00:00",
+      "identifier": [
+         "http://www.hydroshare.org/resource/6711ca843bcc4834b51288a3ddc3aa08",
          {
-            "@type":[
-               "PropertyValue",
-               "datacite:ResourceIdentifier"
-            ],
-            "datacite:usesIdentifierScheme":{
-               "@id":"datacite:local-resource-identifier-scheme"
-            },
-            "propertyId":"UUID",
-            "value":"uuid:481cfb738f2b44e28305813a04aede71"
-         },
-         {
-            "@type":"PropertyValue",
-            "additionalType":[
+            "@type": "PropertyValue",
+            "additionalType": [
                "http://www.wikidata.org/entity/Q185235",
                "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions/md5"
             ],
-            "identifier":"md5:dcc2c7d55a1167e6df887393f1462542",
-            "propertyID":"MD5",
-            "value":"dcc2c7d55a1167e6df887393f1462542"
+            "identifier": "md5:d9b710e5ec79ad8ac09a15f7d949103c",
+            "propertyID": "MD5",
+            "value": "d9b710e5ec79ad8ac09a15f7d949103c"
          }
       ]
    }

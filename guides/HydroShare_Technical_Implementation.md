@@ -254,9 +254,9 @@ For a point spatial coverage in HydroShare, the location can be expressed using 
    "name": "Time Series Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
    "description": "This dataset includes time series data collected during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Time series data includes fluorescent dissolved organic matter (FDOM), observations from custom fluorometers used to calculate the fluorescence index in situ, turbidity, and rainfall. Methods used for deploying sensors, collecting data, and processing for quality control are described in the methods document contained within this resource.",
    "spatialCoverage": {
-   "@type": "Place",
-   "geo": {
-      "@type": "GeoCoordinates",
+      "@type": "Place",
+      "geo": {
+         "@type": "GeoCoordinates",
          "latitude": 41.7312,
          "longitude": -111.8513
       },
@@ -444,14 +444,14 @@ According to DataONE's guidance, the [so:distribution](https://schema.org/distri
       "identifier":[
          "https://www.hydroshare.org/resource/6711ca843bcc4834b51288a3ddc3aa08",
          {
-            "@type":"PropertyValue",
-            "additionalType":[
+            "@type": "PropertyValue",
+            "additionalType": [
                "http://www.wikidata.org/entity/Q185235",
                "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions/md5"
             ],
-            "identifier":"md5:dcc2c7d55a1167e6df887393f1462542",
-            "propertyID":"MD5",
-            "value":"dcc2c7d55a1167e6df887393f1462542"
+            "identifier": "md5:dcc2c7d55a1167e6df887393f1462542",
+            "propertyID": "MD5",
+            "value": "dcc2c7d55a1167e6df887393f1462542"
          }
       ]
    }

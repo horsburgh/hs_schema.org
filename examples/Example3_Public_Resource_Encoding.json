@@ -1,0 +1,105 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "@id": "https://www.hydroshare.org/resource/95458e53fe7e474f85642d6a711729b6",
+  "url": "https://www.hydroshare.org/resource/95458e53fe7e474f85642d6a711729b6",
+  "additionalType": "http://www.hydroshare.org/terms/CompositeResource",
+  "name": "ODM2: An Information Model and Software Ecosystem for Spatially-Discrete Earth Observations",
+  "description": "This presentation describes Version 2 of the Observations Data Model (ODM2). ODM2 is an information model for describing and encoding spatially\u002Ddiscrete Earth observations.  ODM2 and its related software ecosystem follow an open development model and can be found in GitHub at http://github.com/ODM2.",
+  "keywords": ["Data", "ODM2", "Observations"],
+  "creativeWorkStatus": "Public",
+  "inLanguage": "en-US",
+  "identifier": "https://www.hydroshare.org/resource/95458e53fe7e474f85642d6a711729b6",
+  "creator": {
+    "@list": [
+      {
+        "@type": "Person",
+        "name": "Jeffery Horsburgh",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Utah State University"
+        },
+        "email": "jeff.horsburgh@usu.edu",
+        "url": "https://www.hydroshare.org/user/10/"
+      },
+      {
+        "@type": "Person",
+        "name": "Anthony Keith Aufdenkampe",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "LimnoTech"
+        },
+        "email": "aaufdenkampe@limno.com",
+        "url": "https://www.hydroshare.org/user/987/"
+      },
+      {
+        "@type": "Person",
+        "name": "Kerstin Lehnert"
+      },
+      {
+        "@type": "Person",
+        "name": "Emilio Mayorga",
+        "email": "emiliom@uw.edu",
+        "url": "https://www.hydroshare.org/user/672/"
+      },
+      {
+        "@type": "Person",
+        "name": "Ilya Zaslavsky"
+      }
+    ]
+  },
+  "provider": {
+    "@id": "https://www.hydroshare.org",
+    "@type": "Organization",
+    "name": "HydroShare",
+    "url": "https://www.hydroshare.org"
+  },
+  "license": {
+    "@type": "CreativeWork",
+    "text": "This resource is shared under the Creative Commons Attribution CC BY.",
+    "url": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "isAccessibleForFree": true,
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "HydroShare",
+    "url": "https://www.hydroshare.org/search/"
+  },
+  "funder": [
+    {
+      "@type": "Organization",
+      "name": "National Science Foundation",
+      "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1224638"
+    }
+  ],
+  "dateCreated": "2017-05-08T17:19:29.135975+00:00",
+  "dateModified": "2017-05-08T17:25:15.938740+00:00",
+  "subjectOf": {
+    "@type": "DataDownload",
+    "name": "resourcemetadata.xml",
+    "description": "Dublin Core Metadata Document Describing the Dataset",
+    "url": "https://www.hydroshare.org/hsapi/resource/95458e53fe7e474f85642d6a711729b6/scimeta/",
+    "encodingFormat": "application/rdf+xml"
+  },
+  "distribution": {
+    "@type": "DataDownload",
+    "contentSize": "103.0 MB",
+    "encodingFormat": "application/zip",
+    "contentUrl": "https://www.hydroshare.org/hsapi/resource/95458e53fe7e474f85642d6a711729b6/",
+    "description": "Zipped BagIt Bag containing the HydroShare Resource",
+    "dateModified": "2017-05-08T17:25:15.938740+00:00",
+    "identifier": [
+      "https://www.hydroshare.org/resource/95458e53fe7e474f85642d6a711729b6",
+      {
+        "@type": "PropertyValue",
+        "additionalType":[
+          "http://www.wikidata.org/entity/Q185235",
+          "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions/md5"
+        ],
+        "identifier": "md5:CHECKSUMVALUEFORZIPPEDBAGHERE",
+        "propertyID": "MD5",
+        "value": "CHECKSUMVALUEFORZIPPEDBAGHERE"
+      }
+    ]
+  }
+}
