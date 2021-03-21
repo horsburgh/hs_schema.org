@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org/",
   "@type": "Dataset",
-  "@id": "https://www.hydroshare.org/resource/95458e53fe7e474f85642d6a711729b6",
+  "@id": "https://www.hydroshare.org/resource/95458e53fe7e474f85642d6a711729b6#resource",
   "url": "https://www.hydroshare.org/resource/95458e53fe7e474f85642d6a711729b6",
   "additionalType": "http://www.hydroshare.org/terms/CompositeResource",
   "name": "ODM2: An Information Model and Software Ecosystem for Spatially-Discrete Earth Observations",
