@@ -4,25 +4,25 @@ HydroShare has chosen to implement Schema.org metadata by embedding it as a scri
 
 https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md
 
-Each of the sections below describe one or more of the Schema.org metadata elements and how they should be implemented for HydroShare resources. Only those elements listed below will be included in HydroShare's Schema.org implementation. Names of the Schema.org elements are linked and prefixed with "so:" to distinguis them in this document.
+Each of the sections below describe one or more of the Schema.org metadata elements and how they should be implemented for HydroShare resources. Only those elements listed below will be included in HydroShare's Schema.org implementation. Names of the Schema.org elements are linked and prefixed with "so:" to distinguish them in this document.
 
 Each of the example JSON-LD code snippets are from a JSON-LD description of a HydroShare resource and should validate using Google's Structured Data Testing Tool located at:
 
 https://search.google.com/structured-data/testing-tool/u/0/
 
-This tool is being deprecated and is being replaced by the Rich Results Test tool:
+This tool is being deprecated and is being replaced by Google's Rich Results Test tool:
 
 https://search.google.com/test/rich-results
 
-We also considered Google's guidance document for describing datasets at:
+We also considered Google's guidance document for describing datasets using Schema.org at:
 
 https://developers.google.com/search/docs/data-types/dataset
 
-The examples below and the full encoding example included in this repository use metadata from an example HydroShare resource that is formally published. For those examples that show encoding for unpublished resources or that show encodings for alternative metadata not used by this resource, the encoding for this resource has been modified to provide an example of how those alternative forms would be expressed and encoded.
+The examples below and the full encoding examples included in this repository use metadata from an example HydroShare resource that is formally published. For those examples that show encoding for unpublished resources or that show encodings for alternative metadata not used by this resource, the encoding for this resource has been modified to provide an example of how those alternative forms would be expressed and encoded.
 
 ## Embedding Schema.org as JSON-LD in HydroShare Resource Landing Pages
 
-The JSON-LD encoding of the Schema.org metadata should be incorporated into the landing page HTML inside the ```<head></head>``` as a ```<script>``` element.
+Per the SOSO guidance, the JSON-LD encoding of the Schema.org metadata should be incorporated into the landing page HTML inside the ```<head></head>``` as a ```<script>``` element.
 
 ```html
 <html>
@@ -50,7 +50,7 @@ element is used to encode the resource's descriptive keywords. See Example 1.
 
 ## @type and so:additionalType elements
 
-Since we are trying to get HydroShare's resources to show up in Google Dataset search, we will use a type of [so:Dataset](https://schema.org/Dataset) for the "@type" element to specify the type of the node. This isn't strictly true of all resources in HydroShare (e.g., modeling resource types), but for our implementation, we will use this for all resources. See Example 1.
+Since we are trying to get HydroShare's resources to show up in Google Dataset search, we will use a type of [so:Dataset](https://schema.org/Dataset) for the "@type" element to specify the type of the node. This isn't strictly true of all resources in HydroShare (e.g., resources containing models), but for our implementation, we will use this for all resources. See Example 1.
 
 The [so:additionalType](https://schema.org/additionalType) element allows us to specify another type for the resource and allows us to be more specific. Here we will use the HydroShare resource type from the HydroShare vocabulary terms page. See Example 1.
 
@@ -117,7 +117,7 @@ For unpublished resources:
     "@context": {
         "@vocab":"https://schema.org/"
     },
-    "@id": "http://www.hydroshare.org/resource/c1be74eeea614d65a29a185a66a7552f#resource",
+    "@id": "http://www.hydroshare.org/resource/c1be74eeea614d65a29a185a66a7552f#schemaorg",
     "url": "http://www.hydroshare.org/resource/c1be74eeea614d65a29a185a66a7552f",
     "@type": "Dataset",
     "additionalType": "http://www.hydroshare.org/terms/CompositeResource",
@@ -303,7 +303,7 @@ Temporal coverage in HydroShare is expressed with a Start Date and an End Date. 
 
 ### so:provider and so:publisher elements
 
-HydroShare is the provider of the content, and, for formally published content, HydroShare is also the publisher of the content. Thus, the [so:provider](https://schema.org/provider) element will appear for all resources, whereas the [so:publisher](https://schema.org/publisher) element will appear only for formally published resources. Both [so:provider](https://schema.org/provider) and [so:publisher](https://schema.org/publisher) elements will be encoded similarly with an "@id" element that points at HydroShare's URL. In addition to the "@id" element, the [so:provider](https://schema.org/provider) element will include an "@type" element of [so:Organization](https://schema.org/Organization), a [so:name](https://schema.org/name) element of "HydroShare", and a [su:url](https://schema.org/URL) element that also points at HydroShare's URL. See Example 8.
+HydroShare is the provider of the content, and, for formally published content, HydroShare is also the publisher of the content. Thus, the [so:provider](https://schema.org/provider) element will appear for all resources, whereas the [so:publisher](https://schema.org/publisher) element will appear only for formally published resources. Both [so:provider](https://schema.org/provider) and [so:publisher](https://schema.org/publisher) elements will be encoded similarly with an "@id" element that points at HydroShare's URL. In addition to the "@id" element, the [so:provider](https://schema.org/provider) element will include an "@type" element of [so:Organization](https://schema.org/Organization), a [so:name](https://schema.org/name) element of "HydroShare", and a [so:url](https://schema.org/URL) element that also points at HydroShare's URL. See Example 8.
 
 ### so:includedInDataCatalog element
 
@@ -352,7 +352,7 @@ The [so:isAccessibleForFree](https://schema.org/isAccessibleForFree) element is 
 
 ## so:citation element
 
-The [so:citation](https://schema.org/citation) element is used in Schema.org to reference some other creative work, such as another publication, web page, scholarly article, etc. It is not used to store the citation of the resource being described as that information is assembled from the information expressed in the other metadata elements. Thus, the [so:citation](https://schema.org/citation) element should be used to encode related resources from HydroShare's metadata. Citations can be expressed as either [so:text](https://schema.org/text) or [so:CreativeWork](https://schema.org/CreativeWork) elements. In either case, there is no way to encode HydroShare's relationship type metadata element. Because of this, the [so:citation](https://schema.org/citation) element will be encoded as an array of text elements, where the text elements are whatever the HydroShare user has specified as the text for the related resource - in the example below, the full text citations of the related resources.
+The [so:citation](https://schema.org/citation) element is used in Schema.org to reference some other creative work, such as another publication, web page, scholarly article, etc. It is not used to store the citation of the resource being described as that information is assembled from the information expressed in the other metadata elements. Thus, the [so:citation](https://schema.org/citation) element should be used to encode related resources from HydroShare's metadata. Citations can be expressed as either [so:text](https://schema.org/text) or [so:CreativeWork](https://schema.org/CreativeWork) elements. In either case, there is no way to encode HydroShare's relationship type metadata element without going to a more complicated provenance model. Because of this, the [so:citation](https://schema.org/citation) element will be encoded as an array of text elements, where the text elements are whatever the HydroShare user has specified as the text for the related resource - in the example below, the full text citations of the related resources.
 
 ### Example 9: so:citation element
 
@@ -426,7 +426,7 @@ The [so:dateCreated](https://schema.org/dateCreated), [so:dateModified](https://
 
 Every HydroShare resource has a Dublin Core metadata file that describes it. The location of this metadata document can be provided using the [so:subjectOf](https://schema.org/subjectOf) element. This element will indicate that the resourcemetadata.xml document for the resource is a "CreativeWork or Event about this Thing" - i.e., the resource being described. Example 12 shows how the [so:subjectOf](https://schema.org/subjectOf) element should be encoded.  
 
-The [so:subjectOf](https://schema.org/subjectOf) element would use an "@type" of "DataDownload" and a [so:name](https://schema.org/name) of "resourcemetadata.xml", which is the name of the metadata file accompanying each HydroShare resource. It will use a [so:description](https://schema.org/description) of "Dublin Core Metadata Document Describing the Dataset". The [so:url](https://schema.org/URL) to the resourcemetadata.xml file for the resource will be specified, and the [so:encodingFormat](https://schema.org/encodingFormat) element will be specified using the mime type for the file "application/rdf+xml". 
+The [so:subjectOf](https://schema.org/subjectOf) element should use an "@type" of "DataDownload" and a [so:name](https://schema.org/name) of "resourcemetadata.xml", which is the name of the metadata file accompanying each HydroShare resource. It will use a [so:description](https://schema.org/description) of "Dublin Core Metadata Document Describing the Dataset". The [so:url](https://schema.org/URL) to the resourcemetadata.xml file for the resource will be specified, and the [so:encodingFormat](https://schema.org/encodingFormat) element will be specified using the mime type for the file "application/rdf+xml". 
 
 ### Example 12: so:subjectOf element
 
@@ -452,7 +452,7 @@ The [so:subjectOf](https://schema.org/subjectOf) element would use an "@type" of
 
 The [so:distribution](https://schema.org/distribution) element specifies how the content of the resource can be accessed/downloaded. Its value can be of "@type" [so:DataDownload](https://schema.org/DataDownload), which has properties [so:contentSize](https://schema.org/contentSize) a text string indicating the size of the file to download (in this case the zipped BagIt Bag containing the resource), [so:encodingFormat](https://schema.org/encodingFormat) a text string indicating the mime type of the file to be downloaded ("application/zip"), [so:contentUrl](https://schema.org/contentUrl) indicating the URL for accessing the zipped BagIt bag for the resource, [so:description](https://schema.org/description) as a text string describing the zipped Bag, and [dateModified](https://schema.org/dateModified) as an encoding of the date on which the content was last modified. 
 
-According to DataONE's guidance, the [so:distribution](https://schema.org/distribution) element should also include an [so:identifier](https://schema.org/identifier) element and a checksum for the distribution file(s). In Example 13, the [so:identifier](https://schema.org/identifier) element is expressed using the URL-encoded HydroShare internal idenfier for the resource. The checksum is a property of the zipped BagIt Bag file to be downloaded. There is still some discussion about how the checksum value should best be encoded, however, we are choosing to adopt preliminary form of this suggested here: https://github.com/ESIPFed/science-on-schema.org/issues/66
+The SOSO group is currently considering whether the [so:distribution](https://schema.org/distribution) element should also include an [so:identifier](https://schema.org/identifier) element and a checksum for the distribution file(s). In anticipation of this being a requirment in upcoming releases, we will include this. In Example 13, the [so:identifier](https://schema.org/identifier) element is expressed using the URL-encoded HydroShare internal idenfier for the resource. The checksum is a property of the zipped BagIt Bag file to be downloaded. There is still some discussion about how the checksum value should best be encoded, however, we are choosing to adopt preliminary form of this suggested here: https://github.com/ESIPFed/science-on-schema.org/issues/66
 
 ### Example 13: so:distribution element
 
