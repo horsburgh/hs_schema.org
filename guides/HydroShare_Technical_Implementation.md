@@ -61,7 +61,9 @@ the superclass of [so:Dataset](https://schema.org/Dataset). If we switched to [s
 
 ```javascript
 {
-    "@context": "https://schema.org/",
+    "@context": {
+        "@vocab":"https://schema.org/"
+    },
     "@type": "Dataset",
     "additionalType": "http://wwww.hydroshare.org/terms/CompositeResource",
     "name": "Mobile Sensing Platform Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
@@ -76,7 +78,7 @@ These elements will identify the actual resource (the thing being described) and
 
 For published resources, the [so:url](https://schema.org/URL) element will use the URL-encoded DOI to point at the resource's landing page. For unpublished resources, we will use the URL-encoded HydroShare identifier for this purpose. Published resources will have a [so:sameAs](https://schema.org/sameAs) element that uses the URL-encoded HydroShare identifier, whereas unpublished resources will not have a [so:sameAs](https://schema.org/sameAs) element. Example 2 shows how these elements should be implemented for both published and unpublished resources.
 
-The @id element is intended to identify the thing that is being described by the JSON-LD node. To do this, we will use a hash URL that is based on the URL to the landing page (either the URL-encoded DOI for published resources, or the URL-encoded HydroShare identifier for unpublished resources). Thus "@id" for the main node will take on the form: https://doi.org/10.4211/hs.6711ca843bcc4834b51288a3ddc3aa08#resource for published resources and https://www.hydroshare.org/resource/6711ca843bcc4834b51288a3ddc3aa08#resource for unpublished resources.
+The @id element is intended to identify the JSON-LD node. To do this, we will use a hash URL that is based on the URL to the landing page (either the URL-encoded DOI for published resources, or the URL-encoded HydroShare identifier for unpublished resources). Thus, "@id" for the main node will take on the form: https://doi.org/10.4211/hs.6711ca843bcc4834b51288a3ddc3aa08#schemaorg for published resources and https://www.hydroshare.org/resource/6711ca843bcc4834b51288a3ddc3aa08#schemaorg for unpublished resources.
 
 ## so:creativeWorkStatus element
 
@@ -92,9 +94,11 @@ For formally published resources:
 
 ```javascript
 {
-    "@context": "https://schema.org/",
+    "@context": {
+        "@vocab":"https://schema.org/"
+    },
     "@type": "Dataset",
-    "@id": "https://doi.org/10.4211/hs.6711ca843bcc4834b51288a3ddc3aa08#resource",
+    "@id": "https://doi.org/10.4211/hs.6711ca843bcc4834b51288a3ddc3aa08#schemaorg",
     "url": "https://doi.org/10.4211/hs.6711ca843bcc4834b51288a3ddc3aa08",
     "sameAs": "https://www.hydroshare.org/resource/6711ca843bcc4834b51288a3ddc3aa08",
     "additionalType": "http://www.hydroshare.org/terms/CompositeResource",
@@ -110,7 +114,9 @@ For unpublished resources:
 
 ```javascript
 {
-    "@context": "https://schema.org/",
+    "@context": {
+        "@vocab":"https://schema.org/"
+    },
     "@id": "http://www.hydroshare.org/resource/c1be74eeea614d65a29a185a66a7552f#resource",
     "url": "http://www.hydroshare.org/resource/c1be74eeea614d65a29a185a66a7552f",
     "@type": "Dataset",
@@ -137,7 +143,9 @@ For formally published resources with DOI and HydroShare identifiers:
 
 ```javascript
 {
-   "@context": "https://schema.org/",
+    "@context": {
+        "@vocab":"https://schema.org/"
+    },
    "@type": "Dataset",
    "name": "Mobile Sensing Platform Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
    "description": "This dataset includes data collected using a mobile sensing platform during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Data were collected by floating a payload of sensors in a longitudinal transect down the length of the canal and recording latitude, longitude, and several water quality variables, including fluorescent dissolved organic matter (FDOM), observations from custom fluorometers designed for calculating the fluorescence index (FI), dissolved oxygen, temperature, pH, specific conductance, and turbidity. The methods used in collection and processing of these data are described in detail in the methods document included within this resource.",
@@ -158,7 +166,9 @@ For unpublished resources with only HydroShare identifier:
 
 ```javascript
 {
-    "@context": "https://schema.org/",
+    "@context": {
+        "@vocab":"https://schema.org/"
+    },
     "@type": "Dataset",
     "name": "Time Series Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
     "description": "This dataset includes time series data collected during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Time series data includes fluorescent dissolved organic matter (FDOM), observations from custom fluorometers used to calculate the fluorescence index in situ, turbidity, and rainfall. Methods used for deploying sensors, collecting data, and processing for quality control are described in the methods document contained within this resource.",
@@ -174,7 +184,9 @@ The [so:creator](https://schema.org/creator) element  will be used as it is in H
 
 ```javascript
 {
-   "@context": "https://schema.org/",
+    "@context": {
+        "@vocab":"https://schema.org/"
+    },
    "@type": "Dataset",
    "name": "Mobile Sensing Platform Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
    "description": "This dataset includes data collected using a mobile sensing platform during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Data were collected by floating a payload of sensors in a longitudinal transect down the length of the canal and recording latitude, longitude, and several water quality variables, including fluorescent dissolved organic matter (FDOM), observations from custom fluorometers designed for calculating the fluorescence index (FI), dissolved oxygen, temperature, pH, specific conductance, and turbidity. The methods used in collection and processing of these data are described in detail in the methods document included within this resource.",
@@ -230,7 +242,9 @@ For a point spatial coverage in HydroShare, the location can be expressed using 
 
 ```javascript
 {
-   "@context": "https://schema.org/",
+    "@context": {
+        "@vocab":"https://schema.org/"
+    },
    "@type": "Dataset",
    "name": "Time Series Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
    "description": "This dataset includes time series data collected during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Time series data includes fluorescent dissolved organic matter (FDOM), observations from custom fluorometers used to calculate the fluorescence index in situ, turbidity, and rainfall. Methods used for deploying sensors, collecting data, and processing for quality control are described in the methods document contained within this resource.",
@@ -249,7 +263,9 @@ For a point spatial coverage in HydroShare, the location can be expressed using 
 
 ```javascript
 {
-   "@context": "https://schema.org/",
+    "@context": {
+        "@vocab":"https://schema.org/"
+    },
    "@type": "Dataset",
    "name": "Time Series Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
    "description": "This dataset includes time series data collected during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Time series data includes fluorescent dissolved organic matter (FDOM), observations from custom fluorometers used to calculate the fluorescence index in situ, turbidity, and rainfall. Methods used for deploying sensors, collecting data, and processing for quality control are described in the methods document contained within this resource.",
@@ -273,7 +289,9 @@ Temporal coverage in HydroShare is expressed with a Start Date and an End Date. 
 
 ```javascript
 {
-   "@context": "https://schema.org/",
+    "@context": {
+        "@vocab":"https://schema.org/"
+    },
    "@type": "Dataset",
    "name": "Time Series Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
    "description": "This dataset includes time series data collected during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Time series data includes fluorescent dissolved organic matter (FDOM), observations from custom fluorometers used to calculate the fluorescence index in situ, turbidity, and rainfall. Methods used for deploying sensors, collecting data, and processing for quality control are described in the methods document contained within this resource.",
@@ -303,7 +321,9 @@ The [so:isAccessibleForFree](https://schema.org/isAccessibleForFree) element is 
 
 ```javascript
 {
-    "@context": "https://schema.org/",
+    "@context": {
+        "@vocab":"https://schema.org/"
+    },
     "@type": "Dataset",
     "name": "Time Series Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
     "description": "This dataset includes time series data collected during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Time series data includes fluorescent dissolved organic matter (FDOM), observations from custom fluorometers used to calculate the fluorescence index in situ, turbidity, and rainfall. Methods used for deploying sensors, collecting data, and processing for quality control are described in the methods document contained within this resource.",
@@ -338,7 +358,9 @@ The [so:citation](https://schema.org/citation) element is used in Schema.org to 
 
 ```javascript
 {
-    "@context": "https://schema.org/",
+    "@context": {
+        "@vocab":"https://schema.org/"
+    },
     "@type": "Dataset",
     "name": "Time Series Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
     "description": "This dataset includes time series data collected during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Time series data includes fluorescent dissolved organic matter (FDOM), observations from custom fluorometers used to calculate the fluorescence index in situ, turbidity, and rainfall. Methods used for deploying sensors, collecting data, and processing for quality control are described in the methods document contained within this resource.",
@@ -359,7 +381,9 @@ The [so:funder](https://schema.org/funder) element is used to encode the funding
 
 ```javascript
 {
-    "@context": "https://schema.org/",
+    "@context": {
+        "@vocab":"https://schema.org/"
+    },
     "@type": "Dataset",
     "name": "Time Series Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
     "description": "This dataset includes time series data collected during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Time series data includes fluorescent dissolved organic matter (FDOM), observations from custom fluorometers used to calculate the fluorescence index in situ, turbidity, and rainfall. Methods used for deploying sensors, collecting data, and processing for quality control are described in the methods document contained within this resource.",
@@ -386,7 +410,9 @@ The [so:dateCreated](https://schema.org/dateCreated), [so:dateModified](https://
 
 ```javascript
 {
-    "@context": "https://schema.org/",
+    "@context": {
+        "@vocab":"https://schema.org/"
+    },
     "@type": "Dataset",
     "name": "Time Series Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
     "description": "This dataset includes time series data collected during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Time series data includes fluorescent dissolved organic matter (FDOM), observations from custom fluorometers used to calculate the fluorescence index in situ, turbidity, and rainfall. Methods used for deploying sensors, collecting data, and processing for quality control are described in the methods document contained within this resource.",
@@ -406,7 +432,9 @@ The [so:subjectOf](https://schema.org/subjectOf) element would use an "@type" of
 
 ```javascript
 {
-    "@context": "https://schema.org/",
+    "@context": {
+        "@vocab":"https://schema.org/"
+    },
     "@type": "Dataset",
     "name": "Time Series Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
     "description": "This dataset includes time series data collected during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Time series data includes fluorescent dissolved organic matter (FDOM), observations from custom fluorometers used to calculate the fluorescence index in situ, turbidity, and rainfall. Methods used for deploying sensors, collecting data, and processing for quality control are described in the methods document contained within this resource.",
@@ -430,7 +458,9 @@ According to DataONE's guidance, the [so:distribution](https://schema.org/distri
 
 ```javascript
 {
-   "@context": "https://schema.org/",
+    "@context": {
+        "@vocab":"https://schema.org/"
+    },
    "@type": "Dataset",
    "name": "Mobile Sensing Platform Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
    "description": "This dataset includes data collected using a mobile sensing platform during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Data were collected by floating a payload of sensors in a longitudinal transect down the length of the canal and recording latitude, longitude, and several water quality variables, including fluorescent dissolved organic matter (FDOM), observations from custom fluorometers designed for calculating the fluorescence index (FI), dissolved oxygen, temperature, pH, specific conductance, and turbidity. The methods used in collection and processing of these data are described in detail in the methods document included within this resource.",

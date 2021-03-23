@@ -1,7 +1,9 @@
 {
-   "@context": "https://schema.org/",
+   "@context": {
+      "@vocab":"https://schema.org/"
+   },
    "@type": "Dataset",
-   "@id": "https://doi.org/10.4211/hs.6711ca843bcc4834b51288a3ddc3aa08#resource",
+   "@id": "https://doi.org/10.4211/hs.6711ca843bcc4834b51288a3ddc3aa08#schemaorg",
    "url": "https://doi.org/10.4211/hs.6711ca843bcc4834b51288a3ddc3aa08",
    "sameAs": "https://www.hydroshare.org/resource/6711ca843bcc4834b51288a3ddc3aa08",
    "additionalType": "http://www.hydroshare.org/terms/CompositeResource",
