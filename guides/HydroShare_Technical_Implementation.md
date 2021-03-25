@@ -252,7 +252,7 @@ For a point spatial coverage in HydroShare, the location can be expressed using 
       "@type": "Place",
       "geo": {
          "@type": "GeoShape",
-         "box": "41.7312, -111.8513 41.7662, -111.8346"
+         "box": "41.7312 -111.8513 41.7662 -111.8346"
       },
       "name": "The HydroShare user's place name if it is included."
    }
