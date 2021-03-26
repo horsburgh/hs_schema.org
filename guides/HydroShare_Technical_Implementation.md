@@ -452,9 +452,11 @@ The [so:subjectOf](https://schema.org/subjectOf) element should use an "@type" o
 
 The [so:distribution](https://schema.org/distribution) element specifies how the content of the resource can be accessed/downloaded. Its value can be of "@type" [so:DataDownload](https://schema.org/DataDownload), which has properties [so:contentSize](https://schema.org/contentSize) a text string indicating the size of the file to download (in this case the zipped BagIt Bag containing the resource), [so:encodingFormat](https://schema.org/encodingFormat) a text string indicating the mime type of the file to be downloaded ("application/zip"), [so:contentUrl](https://schema.org/contentUrl) indicating the URL for accessing the zipped BagIt bag for the resource, [so:description](https://schema.org/description) as a text string describing the zipped Bag, and [dateModified](https://schema.org/dateModified) as an encoding of the date on which the content was last modified. 
 
-The SOSO group is currently considering whether the [so:distribution](https://schema.org/distribution) element should also include an [so:identifier](https://schema.org/identifier) element and a checksum for the distribution file(s). In anticipation of this being a requirment in upcoming releases, we will include this. In Example 13, the [so:identifier](https://schema.org/identifier) element is expressed using the URL-encoded HydroShare internal idenfier for the resource. The checksum is a property of the zipped BagIt Bag file to be downloaded. There is still some discussion about how the checksum value should best be encoded, however, we are choosing to adopt preliminary form of this suggested here: https://github.com/ESIPFed/science-on-schema.org/issues/66
+The SOSO group is currently considering whether the [so:distribution](https://schema.org/distribution) element should also include an [so:identifier](https://schema.org/identifier) element and a checksum for the distribution file(s). In anticipation of this being a requirment in upcoming releases, we will include this. In Example 13, the [so:identifier](https://schema.org/identifier) element is expressed using the URL-encoded HydroShare internal idenfier for the resource. The checksum is a property of the zipped BagIt Bag file to be downloaded. There is still some discussion about how the checksum value should best be encoded, however, we are choosing to adopt preliminary form of this suggested here: https://github.com/ESIPFed/science-on-schema.org/issues/66. Given that checksums for BagIt bags on resources that are not published are only generated on demand, the [so:distribution](https://schema.org/distribution) element for unpublished resources will not provide the checksum information.
 
 ### Example 13: so:distribution element
+
+For formally published resources with DOI and for which we can guarantee the checksum of the BagIt bag has been generated:
 
 ```javascript
 {
@@ -488,3 +490,27 @@ The SOSO group is currently considering whether the [so:distribution](https://sc
 }
 ```
 
+For unpublished resources for which the checksum of the BagIt bag may not have been generated:
+
+```javascript
+{
+	"@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@id": "https://www.hydroshare.org/resource/95458e53fe7e474f85642d6a711729b6#schemaorg",
+    "url": "https://www.hydroshare.org/resource/95458e53fe7e474f85642d6a711729b6",
+    "@type": "Dataset",
+    "additionalType": "http://www.hydroshare.org/terms/CompositeResource",
+    "name": "ODM2: An Information Model and Software Ecosystem for Spatially-Discrete Earth Observations",
+    "description": "This presentation describes Version 2 of the Observations Data Model (ODM2). ODM2 is an information model for describing and encoding spatially\u002Ddiscrete Earth observations.  ODM2 and its related software ecosystem follow an open development model and can be found in GitHub at http://github.com/ODM2.",
+	"distribution": {
+        "@type": "DataDownload",
+        "contentSize": "103.0 MB",
+        "encodingFormat": "application/zip",
+        "contentUrl": "https://www.hydroshare.org/hsapi/resource/95458e53fe7e474f85642d6a711729b6/",
+        "description": "Zipped BagIt Bag containing the HydroShare Resource",
+        "dateModified": "2017-05-08T17:25:15.938740+00:00",
+        "identifier": "https://www.hydroshare.org/resource/95458e53fe7e474f85642d6a711729b6"
+    }
+}
+```
