@@ -494,7 +494,7 @@ For unpublished resources for which the checksum of the BagIt bag may not have b
 
 ```javascript
 {
-	"@context": {
+    "@context": {
         "@vocab": "https://schema.org/"
     },
     "@id": "https://www.hydroshare.org/resource/95458e53fe7e474f85642d6a711729b6#schemaorg",
