@@ -11,7 +11,9 @@
   "keywords": ["Data", "ODM2", "Observations"],
   "creativeWorkStatus": "Public",
   "inLanguage": "en-US",
-  "identifier": "https://www.hydroshare.org/resource/95458e53fe7e474f85642d6a711729b6",
+  "identifier": [
+    "https://www.hydroshare.org/resource/95458e53fe7e474f85642d6a711729b6"
+  ],
   "creator": {
     "@list": [
       {

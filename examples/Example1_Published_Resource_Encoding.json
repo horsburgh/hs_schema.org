@@ -108,8 +108,8 @@
       "@type": "DataDownload",
       "name": "resourcemetadata.xml",
       "description": "Dublin Core Metadata Document Describing the Dataset",
-      "url":"https://www.hydroshare.org/hsapi/resource/6711ca843bcc4834b51288a3ddc3aa08/scimeta/",
-      "encodingFormat":"application/rdf+xml"
+      "url": "https://www.hydroshare.org/hsapi/resource/6711ca843bcc4834b51288a3ddc3aa08/scimeta/",
+      "encodingFormat": "application/rdf+xml"
    },
    "distribution": {
       "@type": "DataDownload",

@@ -172,7 +172,9 @@ For unpublished resources with only HydroShare identifier:
     "@type": "Dataset",
     "name": "Time Series Data for Dissolved Organic Matter Study in the Northwest Field Canal in Logan, UT",
     "description": "This dataset includes time series data collected during baseflow and stormflow conditions in the Northwest Field Canal, located in Logan, UT. Time series data includes fluorescent dissolved organic matter (FDOM), observations from custom fluorometers used to calculate the fluorescence index in situ, turbidity, and rainfall. Methods used for deploying sensors, collecting data, and processing for quality control are described in the methods document contained within this resource.",
-    "identifier": "http://www.hydroshare.org/resource/c1be74eeea614d65a29a185a66a7552f"
+    "identifier": [
+        "http://www.hydroshare.org/resource/c1be74eeea614d65a29a185a66a7552f"
+    ]    
 }
 ```
 
@@ -473,7 +475,7 @@ For formally published resources with DOI and for which we can guarantee the che
       "contentUrl": "https://www.hydroshare.org/hsapi/resource/6711ca843bcc4834b51288a3ddc3aa08/",
       "description": "Zipped BagIt Bag containing the HydroShare Resource",
       "dateModified": "2019-12-09T21:21:50.284113+00:00",
-      "identifier":[
+      "identifier": [
          "https://www.hydroshare.org/resource/6711ca843bcc4834b51288a3ddc3aa08",
          {
             "@type": "PropertyValue",
