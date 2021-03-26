@@ -511,7 +511,7 @@ For unpublished resources for which the checksum of the BagIt bag may not have b
         "description": "Zipped BagIt Bag containing the HydroShare Resource",
         "dateModified": "2017-05-08T17:25:15.938740+00:00",
         "identifier": [
-        	"https://www.hydroshare.org/resource/95458e53fe7e474f85642d6a711729b6"
+            "https://www.hydroshare.org/resource/95458e53fe7e474f85642d6a711729b6"
         ]
     }
 }
